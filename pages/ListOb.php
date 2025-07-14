@@ -62,6 +62,51 @@ while ($ligne = mysqli_fetch_assoc($resultat)) {
                     ?>
                 </tbody>
             </table>
+
+            <br>
+            <br>
+            <table class="table table-striped table-hover table-bordered">
+                <tr class="bg-dark text-white">
+            
+                   <th scope="col">esthétique</th>
+                    <th scope="col">bricolage</th>
+                    <th scope="col">mécanique</th>
+                     <th scope="col">cuisine</th>
+                   
+                    
+                </tr>
+        
+                <tbody>
+                   <?php if ($employes): ?>
+    <?php foreach ($employes as $employe): ?>
+        <tr>
+            <td>
+                <?php if ($employe['nom_categorie'] == 'esthétique'): ?>
+                    <?= htmlspecialchars($employe['nom_objet']) ?>
+                <?php endif; ?>
+            </td>
+            <td>
+                <?php if ($employe['nom_categorie'] == 'bricolage'): ?>
+                    <?= htmlspecialchars($employe['nom_objet']) ?>
+                <?php endif; ?>
+            </td>
+            <td>
+                <?php if ($employe['nom_categorie'] == 'mécanique'): ?>
+                    <?= htmlspecialchars($employe['nom_objet']) ?>
+                <?php endif; ?>
+            </td>
+            <td>
+                <?php if ($employe['nom_categorie'] == 'cuisine'): ?>
+                    <?= htmlspecialchars($employe['nom_objet']) ?>
+                <?php endif; ?>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+<?php else: ?>
+    <tr><td colspan="4">Aucun objet emprunté trouvé.</td></tr>
+<?php endif; ?>
+                </tbody>
+            </table>
         </div>
     </div>
     <a href="../../index.php">Retour login </a>

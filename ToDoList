@@ -1,7 +1,8 @@
 bEFXUoRJ
 
 1-Creation database
- Creation table 
+ Creation table membre,...
+ insertion de donne pour chaque table
 inscription qui va vers new.php qui fait traitement si reussi retour index.php
 login qui va vers ListObj
 
@@ -13,10 +14,24 @@ insertion des 4 catégories ( esthétique, bricolage, mécanique , cuisine )
 
 Creation Tableau dans ListOb , faire un select par rapport a lémail dans login
 
+Filtre 
+faire un filtre selon le categorie de l'objet 
+
+
 Amelioration design [Harena] -> push
 Mihaja : Pull
 
+
+Harena ; 
+Mihaja ListObj.php -> filtre
+
+
+
 Manao formulaire de upload 
+
+
+
+Modification by Mihaja  Brico.sql 
 
 
 
