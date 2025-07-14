@@ -129,7 +129,7 @@ while ($ligne = mysqli_fetch_assoc($resultat)) {
     <div class="card-body">
         <h5 class="card-title"><?= htmlspecialchars($employe['nom_objet']) ?></h5>
         <p class="card-text">Catégorie : <?= htmlspecialchars($employe['nom_categorie']) ?></p>
-        <a href="object_details.php?id=<?= $employe['id_objet'] ?>" class="btn btn-primary">Voir détails</a>
+        <a href="../object_details.php?id=<?= $employe['id_objet'] ?>" class="btn btn-primary">Voir détails</a>
     </div>
 </div>
                     </div>
