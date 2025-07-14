@@ -11,7 +11,7 @@ $sql = "SELECT obj.nom_objet,emp.date_emprunt,emp.date_retour,cat.nom_categorie,
         JOIN membre_56 mem ON obj.id_membre = mem.id_membre
         WHERE mem.email = '$Email'";
 
-         $sql_images = "SELECT * FROM images_objet_56 WHERE id_objet = 1";
+    $sql_images = "SELECT * FROM images_objet_56 WHERE id_objet = 1";
     $result_img = mysqli_query($bdd, $sql_images);
     $image = mysqli_fetch_assoc($result_img) ?: ['path' => '../../assets/images/1.jpg'];
       
@@ -22,6 +22,8 @@ while ($ligne = mysqli_fetch_assoc($resultat)) {
      
     $employes[] = $ligne;
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -88,21 +90,29 @@ while ($ligne = mysqli_fetch_assoc($resultat)) {
             <td>
                 <?php if ($employe['nom_categorie'] == 'esthétique'): ?>
                     <?= htmlspecialchars($employe['nom_objet']) ?>
+                     <a href="../emprunt.php?nom_objet=<?= htmlspecialchars ($employe['nom_objet']) ?>" class="btn btn-primary">Emprunter</a>
                 <?php endif; ?>
             </td>
             <td>
                 <?php if ($employe['nom_categorie'] == 'bricolage'): ?>
                     <?= htmlspecialchars($employe['nom_objet']) ?>
+                     <a href="../emprunt.php?nom_objet=<?= htmlspecialchars ($employe['nom_objet']) ?>" class="btn btn-primary">Emprunter</a>
+        
+                    
                 <?php endif; ?>
             </td>
             <td>
                 <?php if ($employe['nom_categorie'] == 'mécanique'): ?>
                     <?= htmlspecialchars($employe['nom_objet']) ?>
+                     <a href="../emprunt.php?nom_objet=<?= htmlspecialchars ($employe['nom_objet']) ?>" class="btn btn-primary">Emprunter</a>
+                  
                 <?php endif; ?>
             </td>
             <td>
                 <?php if ($employe['nom_categorie'] == 'cuisine'): ?>
                     <?= htmlspecialchars($employe['nom_objet']) ?>
+                     <a href="../emprunt.php?nom_objet=<?= htmlspecialchars ($employe['nom_objet']) ?>" class="btn btn-primary">Emprunter</a>
+                  
                 <?php endif; ?>
             </td>
         </tr>
