@@ -41,5 +41,5 @@ $image['path1'] = $image['path'] ?? '../../assets/images/1.jpg';
                 </div>
             <?php endforeach; ?>
         </div>
-        <a href="./ListOb.php" class="btn btn-primary">Retour à la liste des objets</a>
+        <a href="../index.php" class="btn btn-primary">Retour à login</a>
     </div>
