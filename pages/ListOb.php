@@ -3,12 +3,17 @@ include('../functions/dbconnect.php');
 session_start();
 
 $Email = $_SESSION['email'] ;
-$sql = "SELECT obj.nom_objet,emp.date_emprunt,emp.date_retour,cat.nom_categorie
+$sql = "SELECT obj.nom_objet,emp.date_emprunt,emp.date_retour,cat.nom_categorie,img.id_objet
         FROM objet_56 obj
+        JOIN images_objet_56 img ON obj.id_objet = img.id_objet
         JOIN categorie_objet_56 cat ON obj.id_categorie = cat.id_categorie
         JOIN emprunt_56 emp ON obj.id_objet = emp.id_objet
         JOIN membre_56 mem ON obj.id_membre = mem.id_membre
         WHERE mem.email = '$Email'";
+
+         $sql_images = "SELECT * FROM images_objet_56 WHERE id_objet = 1";
+    $result_img = mysqli_query($bdd, $sql_images);
+    $image = mysqli_fetch_assoc($result_img) ?: ['path' => '../../assets/images/1.jpg'];
       
 $resultat = mysqli_query($bdd, $sql);
 
@@ -111,8 +116,31 @@ while ($ligne = mysqli_fetch_assoc($resultat)) {
     </div>
     <a href="../../index.php">Retour login </a>
     <br>
+    <br>
+    <a href="../upload.php">Upload image</a>
+
+    <div class="row">
+            <?php if ($employes): ?>
+                <?php foreach ($employes as $employe): ?>
+                    <div class="col-md-4 mb-4">
+                        <div class="card object-card">
+    <img src="<?= htmlspecialchars($image['path']) ?>" class="card-img-top" ">
+    
+    <div class="card-body">
+        <h5 class="card-title"><?= htmlspecialchars($employe['nom_objet']) ?></h5>
+        <p class="card-text">Catégorie : <?= htmlspecialchars($employe['nom_categorie']) ?></p>
+        <a href="object_details.php?id=<?= $employe['id_objet'] ?>" class="btn btn-primary">Voir détails</a>
+    </div>
+</div>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="alert alert-info">Aucun objet trouvé.</div>
+            <?php endif; ?>
+        </div>
    
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
 

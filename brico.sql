@@ -100,14 +100,14 @@ INSERT INTO objet_56 (nom_objet, id_categorie, id_membre) VALUES
 ('Spatule', 4, 4);
 
 INSERT INTO images_objet_56 (id_objet, nom_image) VALUES
-(1, 'img1.jpg'), (2, 'img2.jpg'), (3, 'img3.jpg'), (4, 'img4.jpg'), (5, 'img5.jpg'),
-(6, 'img6.jpg'), (7, 'img7.jpg'), (8, 'img8.jpg'), (9, 'img9.jpg'), (10, 'img10.jpg'),
-(11, 'img11.jpg'), (12, 'img12.jpg'), (13, 'img13.jpg'), (14, 'img14.jpg'), (15, 'img15.jpg'),
-(16, 'img16.jpg'), (17, 'img17.jpg'), (18, 'img18.jpg'), (19, 'img19.jpg'), (20, 'img20.jpg'),
-(21, 'img21.jpg'), (22, 'img22.jpg'), (23, 'img23.jpg'), (24, 'img24.jpg'), (25, 'img25.jpg'),
-(26, 'img26.jpg'), (27, 'img27.jpg'), (28, 'img28.jpg'), (29, 'img29.jpg'), (30, 'img30.jpg'),
-(31, 'img31.jpg'), (32, 'img32.jpg'), (33, 'img33.jpg'), (34, 'img34.jpg'), (35, 'img35.jpg'),
-(36, 'img36.jpg'), (37, 'img37.jpg'), (38, 'img38.jpg'), (39, 'img39.jpg'), (40, 'img40.jpg');
+(1, '1.jpg'), (2, '2.jpg'), (3, '3.jpg'), (4, '4.jpg'), (5, '5.jpg'),
+(6, '6.jpg'), (7, '7.jpg'), (8, '8.jpg'), (9, '9.jpg'), (10, '10.jpg'),
+(11, '11.jpg'), (12, '12.jpg'), (13, '13.jpg'), (14, '14.jpg'), (15, '15.jpg'),
+(16, '16.jpg'), (17, '17.jpg'), (18, '18.jpg'), (19, '19.jpg'), (20, '20.jpg'),
+(21, '21.jpg'), (22, '22.jpg'), (23, '23.jpg'), (24, '24.jpg'), (25, '25.jpg'),
+(26, '26.jpg'), (27, '27.jpg'), (28, '28.jpg'), (29, '29.jpg'), (30, '30.jpg'),
+(31, '31.jpg'), (32, '32.jpg'), (33, '33.jpg'), (34, '34.jpg'), (35, '35.jpg'),
+(36, '36.jpg'), (37, '37.jpg'), (38, '38.jpg'), (39, '39.jpg'), (40, '40.jpg');
 
 
 INSERT INTO emprunt_56 (id_objet, id_membre, date_emprunt, date_retour) VALUES
