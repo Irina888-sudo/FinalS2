@@ -9,7 +9,7 @@
 <body>
     
     <h1>LOGIN</h1>
-    <form action="load.php" method="POST">
+    <form action="pages/load.php" method="POST">
         <label>Email :</label><br>
         <input type="email" name="email" required><br><br>
 

@@ -1,0 +1,19 @@
+bEFXUoRJ
+
+1-Creation database
+ Creation table 
+inscription qui va vers new.php qui fait traitement si reussi retour index.php
+login qui va vers ListObj
+
+Creation load.php qui sert a verifier le mot de passe et l'email si correcte va vers ListObj.php
+
+insertion des 4 catégories ( esthétique, bricolage, mécanique , cuisine )
+10 objets par membre à répartir sur les catégories
+10 emprunts  dans databases
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
     <?php
     try {
-        $bdd = mysqli_connect('localhost', 'root', '', 'etu4016_4192');
+        $bdd = mysqli_connect('localhost', 'root', '', 'finalS2');
     } catch (\Throwable $th) {
         throw $th;
     }
