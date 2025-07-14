@@ -2,7 +2,9 @@
 session_start();
 include('../functions/dbconnect.php');
 $Email = $_POST['email'];
+$_SESSION['email'] = $Email;
 $Mot_de_passe = $_POST['mdp'];
+
 $sql = "SELECT id_membre,email,mdp FROM membre_56 WHERE email='$Email' AND mdp='$Mot_de_passe'";
 $resultat = mysqli_query($bdd, $sql);
 if ($donnees = mysqli_fetch_assoc($resultat)) {
