@@ -56,13 +56,13 @@ while ($ligne = mysqli_fetch_assoc($resultat)) {
                     } else {
                     ?>
                         <tr>
-                            <td colspan="3">Aucun employé trouvé.</td>
+                            <td colspan="3">Aucun element trouvé.</td>
                         </tr>
                     <?php
                     }
                     
                     mysqli_close($bdd);
                     ?>
-                    <a href="http:../../index">Retour Login</a>
+                    <a href="../../index">Retour Login</a>
                 </tbody>
             </table>
